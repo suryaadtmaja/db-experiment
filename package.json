@@ -1,0 +1,36 @@
+{
+ "name": "fastify-prisma-template",
+ "scripts": {
+  "dev": "fastify start -w -l info -P -p 1337 src/app.js",
+  "lintfix": "standard --fix",
+	"vercel-build": "prisma generate && prisma migrate deploy"
+ },
+ "version": "1.0.0",
+ "description": "fastify prisma",
+ "main": "index.js",
+ "type": "module",
+ "repository": "https://github.com/filsuck/fastify-prisma-template",
+ "author": "filsuck",
+ "license": "MIT",
+ "private": false,
+ "dependencies": {
+  "@prisma/client": "^3.7.0",
+  "dotenv": "^10.0.0",
+  "dotenv-cli": "^4.1.1",
+  "fastify": "^3.25.2",
+  "fastify-autoload": "^3.9.0",
+  "fastify-cli": "^2.14.0",
+  "fastify-cors": "^6.0.2",
+  "fastify-plugin": "^3.0.0"
+ },
+ "devDependencies": {
+  "@vercel/node": "^1.12.1",
+  "prisma": "^3.7.0",
+  "standard": "^16.0.4"
+ },
+ "standard": {
+  "ignore": [
+   "**/node_modules/**"
+  ]
+ }
+}
